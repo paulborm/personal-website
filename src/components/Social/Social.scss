@@ -15,7 +15,7 @@
 
         display: block;
         position: relative;
-        padding: 8px;
+        padding: 0 8px;
         font-size: 16px;
         line-height: 1;
         font-weight: 700;
@@ -28,19 +28,6 @@
 
         @media (prefers-color-scheme: dark) {
             color: #fff;
-        }
-
-        @media (hover) {
-            &:hover {
-                svg {
-                    opacity: 1;
-                }
-
-                &::after {
-                    opacity: 1;
-                    transform: translateY(0) translateX(-50%);
-                }
-            }
         }
 
         &::after {
@@ -78,6 +65,19 @@
 
         svg {
             transition: opacity 250ms ease-in-out;
+        }
+
+        @media (hover) {
+            &:hover {
+                svg {
+                    opacity: 1;
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translateY(12px) translateX(-50%);
+                }
+            }
         }
     }
 }
