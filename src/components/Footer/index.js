@@ -28,11 +28,12 @@ const Footer = () => (
             </a>
         </div>
         <div className="Footer__links">
-            {LINKS.map(({ to, title }) => (
+            {LINKS.map(({ to, title }, index) => (
                 <Link
                     className="Footer__link"
                     key={to + title}
                     to={to}
+                    style={{ animationDelay: `${index * 200}ms` }}
                 >
                     {title}
                 </Link>

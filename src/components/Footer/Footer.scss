@@ -17,6 +17,10 @@
         font-family: sans-serif;
         font-size: 12px;
         line-height: 1;
+
+        animation-name: fadeUp;
+        animation-duration: 1s;
+        animation-fill-mode: both;
     }
 
     &__info,
@@ -58,8 +62,21 @@
     }
 
     &__link {
+        display: inline-block;
+
         &:not(:last-child) {
             margin-right: 1em;
         }
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

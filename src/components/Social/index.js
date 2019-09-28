@@ -29,7 +29,7 @@ const LINKS = [
 
 const Social = () => (
     <div className="Social">
-        {LINKS.map(({ icon, url, title }) => (
+        {LINKS.map(({ icon, url, title }, index) => (
             <a
                 key={url}
                 className="Social__item"
@@ -37,6 +37,7 @@ const Social = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 title={title}
+                style={{ animationDelay: `${index * 100}ms` }}
             >
                 <FontAwesomeIcon icon={icon} />
             </a>
