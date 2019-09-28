@@ -40,8 +40,14 @@ html {
     display: none;
   }
   a {
+    color: blue;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+  }
+  @media (prefers-color-scheme: dark) {
+    a {
+        color: #46a6ff;
+    }
   }
   a:active,
   a:hover {
@@ -208,6 +214,11 @@ html {
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
+  }
+  @media (prefers-color-scheme: dark) {
+      body {
+          color: #fff;
+      }
   }
   img {
     max-width: 100%;
