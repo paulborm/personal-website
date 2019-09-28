@@ -31,7 +31,7 @@ const IndexPage = () => (
             >
                 👨‍💻
             </span>
-            <br/> Frontend-Developer & Mediengestalter aus dem Raum Stuttgart.
+            <br/>Frontend-Developer & Mediengestalter aus dem Raum Stuttgart.
         </Headline>
     </Layout>
 )

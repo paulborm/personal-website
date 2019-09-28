@@ -17,14 +17,14 @@ const LINKS = [
 const Footer = () => (
     <footer className="Footer">
         <div className="Footer__info">
-            © {new Date().getFullYear()}, built using
+            © {new Date().getFullYear()}, gebaut mit
             {` `}
             <a
                 href="https://www.gatsbyjs.org"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
             >
-                gatsby
+                Gatsby
             </a>
         </div>
         <div className="Footer__links">

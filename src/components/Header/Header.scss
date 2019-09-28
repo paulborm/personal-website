@@ -2,8 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
     padding: 24px;
     width: 100%;
+    background-color: #fff;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #1a1a1b;
+    }
 
     &__headline,
     &__headline a {
