@@ -1,0 +1,58 @@
+.Footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin-top: auto;
+    padding: 24px;
+    width: 100%;
+
+    @media screen and (min-width: 414px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info,
+    &__link {
+        font-family: sans-serif;
+        font-size: 12px;
+        line-height: 1;
+    }
+
+    &__info,
+    &__info a {
+        color: gray;
+    }
+
+    &__links {
+        width: 100%;
+        text-align: right;
+
+        &::after {
+            display: block;
+            content: "";
+            height: 1px;
+            background: #d0d0d0;
+            width: 100%;
+            margin: 0.4em 0 0.6em 0;
+
+            @media screen and (min-width: 414px) {
+                display: none;
+                text-align: left;
+            }
+        }
+
+        @media screen and (min-width: 414px) {
+            width: auto;
+            text-align: left;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+    }
+}

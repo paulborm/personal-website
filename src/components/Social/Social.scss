@@ -1,0 +1,14 @@
+.Social {
+    display: flex;
+    flex: 0 0 auto;
+
+    &__item {
+        display: block;
+        padding: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+    }
+}
