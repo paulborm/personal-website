@@ -8,28 +8,32 @@ const LINKS = [
     {
         icon: faXing,
         url: `https://www.xing.com/profile/Paul_Borm/`,
-        title: `Xing - Paul Borm`
+        title: `Xing - Paul Borm`,
+        shortName: `Xing`,
     },
     {
         icon: faCodepen,
         url: `https://codepen.io/paulborm`,
-        title: `Codepen - Paul Borm`
+        title: `Codepen - Paul Borm`,
+        shortName: `Codepen`,
     },
     {
         icon: faInstagram,
         url: `https://www.instagram.com/paulorero/`,
-        title: `Instagram - Paul Borm`
+        title: `Instagram - Paul Borm`,
+        shortName: `Instagram`,
     },
     {
         icon: faTwitter,
         url: `https://twitter.com/borm_paul`,
-        title: `Twitter - Paul Borm`
+        title: `Twitter - Paul Borm`,
+        shortName: `Twitter`,
     },
 ];
 
 const Social = () => (
     <div className="Social">
-        {LINKS.map(({ icon, url, title }, index) => (
+        {LINKS.map(({ icon, url, title, shortName }, index) => (
             <a
                 key={url}
                 className="Social__item"
@@ -38,6 +42,7 @@ const Social = () => (
                 rel="noopener noreferrer"
                 title={title}
                 style={{ animationDelay: `${index * 100}ms` }}
+                data-dropdown={shortName}
             >
                 <FontAwesomeIcon icon={icon} />
             </a>

@@ -2,13 +2,23 @@
     display: flex;
     flex: 0 0 auto;
 
+    @media (hover) {
+        &:hover {
+            svg {
+                opacity: .5;
+            }
+        }
+    }
+
     &__item {
+        $parent: &;
+
         display: block;
+        position: relative;
         padding: 8px;
         font-size: 16px;
         line-height: 1;
         font-weight: 700;
-        text-transform: uppercase;
         text-decoration: none;
         color: #000;
 
@@ -18,6 +28,56 @@
 
         @media (prefers-color-scheme: dark) {
             color: #fff;
+        }
+
+        @media (hover) {
+            &:hover {
+                svg {
+                    opacity: 1;
+                }
+
+                &::after {
+                    opacity: 1;
+                    transform: translateY(0) translateX(-50%);
+                }
+            }
+        }
+
+        &::after {
+            content: attr(data-dropdown);
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            padding: .7em;
+
+            opacity: 0;
+            pointer-events: none;
+
+            color: gray;
+            font-size: 8px;
+            letter-spacing: .05em;
+            font-family: sans-serif;
+            font-weight: bold;
+            line-height: 1;
+            text-transform: uppercase;
+
+            border-radius: .5em;
+            background-color: #e4e4e4;
+
+            transform: translateY(-100%) translateX(-50%);
+            transition:
+                opacity 250ms ease-in-out,
+                transform 250ms ease-in-out;
+
+            @media (prefers-color-scheme: dark) {
+                color: #b1b1b1;
+                background-color: #48484a;
+            }
+        }
+
+        svg {
+            transition: opacity 250ms ease-in-out;
         }
     }
 }
