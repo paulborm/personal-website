@@ -4,7 +4,10 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 const Datenschutz = () => (
-    <Layout>
+    <Layout style={{
+        margin: `0 auto`,
+        maxWidth: 560
+    }}>
         <SEO title="Datenschutz" />
         <h1>Datenschutzerklärung</h1>
         <h2 id="name-und-kontakt-des-verantwortlichen-gem-artikel-4-abs-7-dsgvo">Name und Kontakt des Verantwortlichen gemäß Artikel 4 Abs. 7 DSGVO</h2>

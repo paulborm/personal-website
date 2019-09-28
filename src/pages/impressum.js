@@ -4,7 +4,10 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 const Impressum = () => (
-    <Layout>
+    <Layout style={{
+        margin: `0 auto`,
+        maxWidth: 560
+    }}>
         <SEO title="Impressum" />
         <h1>Impressum</h1>
         <h2>Angaben gemäß § 5 TMG:</h2>
