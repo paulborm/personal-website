@@ -29,6 +29,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+        resolve: 'gatsby-plugin-htaccess',
+        options: {
+            https: true,
+            www: true,
+            host: 'www.paulborm.de',
+        },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
