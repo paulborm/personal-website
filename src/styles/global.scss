@@ -5,3 +5,79 @@ body {
         background-color: #1a1a1b;
     }
 }
+
+.vscode-highlight {
+    --vscode-highlight-padding-right: 0;
+    --vscode-highlight-padding-left: 0;
+
+    /* Line highlighting: see next section */
+    --vscode-highlight-line-highlighted-background-color: transparent;
+    --vscode-highlight-line-highlighted-border-width: 4px;
+    --vscode-highlight-line-highlighted-border-color: transparent;
+}
+
+.vscode-highlight {
+    position: relative;
+    margin: 0;
+    padding: 2.5em 1em 1em;
+
+    &::before {
+        color: currentColor;
+        font-size: 0.75em;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        letter-spacing: 0.075em;
+        line-height: 1;
+        position: absolute;
+        text-align: right;
+        text-transform: uppercase;
+        top: 0px;
+        border-radius: 0px 0px 4px 4px;
+        padding: 1em 0;
+        background-color: var(--vscode-highlight-line-highlighted-background-color);
+    }
+
+    &[data-language="bash"] {
+        &::before {
+            content: "shell";
+        }
+
+        .vscode-highlight-line-highlighted::before {
+            content: "~ $ ";
+            display: inline-block;
+            opacity: .5;
+        }
+    }
+
+
+    &-code {
+        padding: 0;
+    }
+}
+
+
+// .gatsby-highlight {
+//     position: relative;
+// }
+
+// .gatsby-highlight pre[class*="language-"] {
+//     padding: 1.5em 1em;
+// }
+
+// .gatsby-highlight pre[class*="language-"]::before {
+//     color: #232129;
+//     font-size: 0.75em;
+//     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+//     letter-spacing: 0.075em;
+//     line-height: 1;
+//     position: absolute;
+//     text-align: right;
+//     text-transform: uppercase;
+//     top: 0px;
+//     border-radius: 0px 0px 4px 4px;
+//     padding: 0.25rem 0.5rem;
+// }
+
+// .gatsby-highlight pre[class="language-bash"]::before {
+//     content: "bash";
+//     background-color: #7f7f8a;
+// }
