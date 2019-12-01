@@ -5,6 +5,10 @@ import "./Footer.scss";
 
 const LINKS = [
     {
+        to: `/command-line`,
+        title: `cmd`,
+    },
+    {
         to: `/impressum`,
         title: `Impressum`,
     },

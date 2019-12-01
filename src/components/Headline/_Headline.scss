@@ -60,6 +60,12 @@
         text-transform: uppercase;
     }
 
+    &--monospace {
+        font-family: monospace;
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+
     &--regular {
         font-weight: 400;
         font-weight: normal;

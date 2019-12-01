@@ -54,7 +54,7 @@ module.exports = {
                         options: {
                             injectStyles: false,
                             colorTheme: {
-                                defaultTheme: 'Quiet Light',
+                                defaultTheme: 'Light+ (default light)',
                                 prefersDarkTheme: 'Dark+ (default dark)',
                             }
                         }

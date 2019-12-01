@@ -1,4 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: sans-serif;
     background-color: #fff;
 
     @media (prefers-color-scheme: dark) {
@@ -9,31 +14,35 @@ body {
 .vscode-highlight {
     --vscode-highlight-padding-right: 0;
     --vscode-highlight-padding-left: 0;
-
-    /* Line highlighting: see next section */
-    --vscode-highlight-line-highlighted-background-color: transparent;
-    --vscode-highlight-line-highlighted-border-width: 4px;
-    --vscode-highlight-line-highlighted-border-color: transparent;
 }
 
 .vscode-highlight {
+    $parent: &;
+
     position: relative;
-    margin: 0;
+    margin: 2em 0;
     padding: 2.5em 1em 1em;
 
     &::before {
+        position: absolute;
+        top: 0px;
+        padding: 1em 0;
         color: currentColor;
         font-size: 0.75em;
         font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
         letter-spacing: 0.075em;
         line-height: 1;
-        position: absolute;
         text-align: right;
         text-transform: uppercase;
-        top: 0px;
         border-radius: 0px 0px 4px 4px;
-        padding: 1em 0;
         background-color: var(--vscode-highlight-line-highlighted-background-color);
+        opacity: .25;
+    }
+
+    &.light-default-light {
+        @media (prefers-color-scheme: light) {
+            background-color: #F5F5F5;
+        }
     }
 
     &[data-language="bash"] {
@@ -41,17 +50,26 @@ body {
             content: "shell";
         }
 
-        .vscode-highlight-line-highlighted::before {
-            content: "~ $ ";
-            display: inline-block;
-            opacity: .5;
+        #{$parent}-code {
+            user-select: none;
         }
-    }
 
+        .vscode-highlight-line-highlighted {
+            user-select: all;
+
+            &::before {
+                content: "~ $ ";
+                display: inline-block;
+                // opacity: .5;
+            }
+        }
+
+    }
 
     &-code {
         padding: 0;
     }
+
 }
 
 

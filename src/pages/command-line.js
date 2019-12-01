@@ -27,12 +27,13 @@ const TerminalTools = ({
 }) => (
     <Layout style={{
         margin: `0 auto`,
+        width: `100%`,
         maxWidth: 960,
     }}>
-        <SEO title="Terminal Tools" />
+        <SEO title="Command line tools" />
         <div style={{ padding: `4em 0` }}>
-            <Headline as="h1">Command line tools and commands</Headline>
-            <p>A collection of handy tools and commands I use from time to time but can't memorize.</p>
+            <Headline as="h1" look="monospace large">Collection of command line tools and commands.</Headline>
+            <p>A small living collection of some handy and usefull tools I use from time to time but can't memorize.</p>
         </div>
 
         {group.map(({ category, items }) => (
@@ -52,18 +53,20 @@ const Group = ({ name = "", items = [] }) => (
         id={name}
         style={{ margin: `1em 0`, padding: `1em 0` }}
     >
-        <Headline as="h2">
+        <Headline as="h2" look="small">
             <a
                 href={`#${name}`}
                 aria-hidden
                 style={{
                     textDecoration: 'none',
-                    fontSize: '.65em',
+                    fontSize: '.85em',
+                    color: 'currentColor',
+                    opacity: .5,
                     verticalAlign: 'middle',
-                    marginRight: '.25em',
+                    marginRight: '.3em',
                 }}
             >
-                🔗
+                #
             </a>
             {CATEGORIES[name].title}
         </Headline>
@@ -80,8 +83,8 @@ const Group = ({ name = "", items = [] }) => (
 export const pageQuery = graphql`
     query {
         allMarkdownRemark(
-            filter: {frontmatter: {draft: {eq: false}}}
-            sort: {order: ASC, fields: frontmatter___category}
+            filter: { frontmatter: {draft: {eq: false}} }
+            sort: { order: DESC, fields: frontmatter___date }
         ) {
             group(field: frontmatter___category) {
                 category: fieldValue
