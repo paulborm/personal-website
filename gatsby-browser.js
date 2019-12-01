@@ -6,7 +6,10 @@
 
 // You can delete this file if you're not using it
 
+import vhCheck from 'vh-check';
 import 'gatsby-remark-vscode/styles.css';
+
+vhCheck();
 
 // require("prismjs/themes/prism-tomorrow.css")
 // require("prismjs/plugins/command-line/prism-command-line.css")
