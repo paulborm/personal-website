@@ -50,10 +50,6 @@ body {
             content: "shell";
         }
 
-        #{$parent}-code {
-            user-select: none;
-        }
-
         .vscode-highlight-line-highlighted {
             user-select: all;
 
