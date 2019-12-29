@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: paulborm.de
-Token: 75771044c6247219a98ba3ebc9400fe684d57500e918737dd17cc332e252c71a
