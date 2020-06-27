@@ -2,7 +2,7 @@
   "name": "@paulborm/personal-website",
   "private": true,
   "description": "Personal Website of Paul Borm",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Paul Borm",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
