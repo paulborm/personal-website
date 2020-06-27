@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import contact from "../contents/contact.json"
 
 const Datenschutz = () => (
   <Layout
@@ -12,15 +13,15 @@ const Datenschutz = () => (
   >
     <SEO title="Datenschutz" />
     <h1>Datenschutzerklärung</h1>
-    <h2 id="name-und-kontakt-des-verantwortlichen-gem-artikel-4-abs-7-dsgvo">
+    <h2 id="name-und-kontakt-des-verantwortlichen-gemaess-artikel-4-abs-7-dsgvo">
       Name und Kontakt des Verantwortlichen gemäß Artikel 4 Abs. 7 DSGVO
     </h2>
     <p>
-      Paul Borm
-      <br /> Im Städtle 9
-      <br /> 73240 Wendlingen am Neckar
-      <br /> Telefon: 07024 5681353
-      <br /> E-Mail: hallo[a]paulborm.de
+      {contact.fullName}
+      <br /> {contact.address.street}
+      <br /> {contact.address.city}
+      <br /> Telefon: {contact.phone}
+      <br /> E-Mail: {contact.mail}
     </p>
     <h2 id="sicherheit-und-schutz-ihrer-personenbezogenen-daten">
       Sicherheit und Schutz Ihrer personenbezogenen Daten
@@ -40,6 +41,7 @@ const Datenschutz = () => (
       Vorschriften über den Datenschutz sowohl von uns, als auch von unseren
       externen Dienstleistern beachtet werden.
     </p>
+
     <h3 id="begriffsbestimmungen">Begriffsbestimmungen</h3>
     <p>
       Der Gesetzgeber fordert, dass personenbezogene Daten auf rechtmäßige
@@ -49,131 +51,158 @@ const Datenschutz = () => (
       informieren wir Sie über die einzelnen gesetzlichen Begriffsbestimmungen,
       die auch in dieser Datenschutzerklärung verwendet werden:
     </p>
-    <p>
-      1. <strong>Personenbezogene Daten</strong>
-    </p>
-    <p>
-      „Personenbezogene Daten“ sind alle Informationen, die sich auf eine
-      identifizierte oder identifizierbare natürliche Person (im Folgenden
-      „betroffene Person“) beziehen; als identifizierbar wird eine natürliche
-      Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung
-      zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten,
-      zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen
-      identifiziert werden kann, die Ausdruck der physischen, physiologischen,
-      genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen
-      Identität dieser natürlichen Person sind.
-    </p>
-    <p>
-      2. <strong>Verarbeitung</strong>
-    </p>
-    <p>
-      „Verarbeitung“ ist jeder, mit oder ohne Hilfe automatisierter Verfahren,
-      ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit
-      personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation,
-      das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen,
-      das Abfragen, die Verwendung, die Offenlegung durch übermittlung,
-      Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder
-      die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.
-    </p>
-    <p>
-      3. <strong>Einschränkung der Verarbeitung</strong>
-    </p>
-    <p>
-      „Einschränkung der Verarbeitung“ ist die Markierung gespeicherter
-      personenbezogener Daten mit dem Ziel, ihre künftige Verarbeitung
-      einzuschränken.
-    </p>
-    <p>
-      4. <strong>Profiling</strong>
-    </p>
-    <p>
-      „Profiling“ ist jede Art der automatisierten Verarbeitung
-      personenbezogener Daten, die darin besteht, dass diese personenbezogenen
-      Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf
-      eine natürliche Person beziehen, zu bewerten, insbesondere um Aspekte
-      bezüglich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönliche
-      Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder
-      Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen.
-    </p>
-    <p>
-      5. <strong>Pseudonymisierung</strong>
-    </p>
-    <p>
-      „Pseudonymisierung“ ist die Verarbeitung personenbezogener Daten in einer
-      Weise, dass die personenbezogenen Daten ohne Hinzuziehung zusätzlicher
-      Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet
-      werden können, sofern diese zusätzlichen Informationen gesondert
-      aufbewahrt werden und technischen und organisatorischen Maßnahmen
-      unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht
-      einer identifizierten oder identifizierbaren natürlichen Person zugewiesen
-      werden können.
-    </p>
-    <p>
-      6. <strong>Dateisystem</strong>
-    </p>
-    <p>
-      „Dateisystem“ ist jede strukturierte Sammlung personenbezogener Daten, die
-      nach bestimmten Kriterien zugänglich sind, unabhängig davon, ob diese
-      Sammlung zentral, dezentral oder nach funktionalen oder geografischen
-      Gesichtspunkten geordnet geführt wird.
-    </p>
-    <p>
-      7. <strong>Verantwortlicher</strong>
-    </p>
-    <p>
-      „Verantwortlicher“ ist eine natürliche oder juristische Person, Behörde,
-      Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über
-      die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten
-      entscheidet; sind die Zwecke und Mittel dieser Verarbeitung durch das
-      Unionsrecht oder das Recht der Mitgliedstaaten vorgegeben, so können der
-      Verantwortliche beziehungsweise die bestimmten Kriterien seiner Benennung
-      nach dem Unionsrecht oder dem Recht der Mitgliedstaaten vorgesehen werden.
-    </p>
-    <p>
-      8. <strong>Auftragsverarbeiter</strong>
-    </p>
-    <p>
-      „Auftragsverarbeiter“ ist eine natürliche oder juristische Person,
-      Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im
-      Auftrag des Verantwortlichen verarbeitet.{" "}
-    </p>
-    <p>
-      9. <strong>Empfänger</strong>
-    </p>
-    <p>
-      „Empfänger“ ist eine natürliche oder juristische Person, Behörde,
-      Einrichtung oder andere Stelle, denen personenbezogene Daten offengelegt
-      werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt oder
-      nicht. Behörden, die im Rahmen eines bestimmten Untersuchungsauftrags nach
-      dem Unionsrecht oder dem Recht der Mitgliedstaaten möglicherweise
-      personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger; die
-      Verarbeitung dieser Daten durch die genannten Behörden erfolgt im Einklang
-      mit den geltenden Datenschutzvorschriften gemäß den Zwecken der
-      Verarbeitung.
-    </p>
-    <p>
-      10. <strong>Dritter</strong>
-    </p>
-    <p>
-      „Dritter“ ist eine natürliche oder juristische Person, Behörde,
-      Einrichtung oder andere Stelle, außer der betroffenen Person, dem
-      Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der
-      unmittelbaren Verantwortung des Verantwortlichen oder des
-      Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu
-      verarbeiten.
-    </p>
-    <p>
-      11. <strong>Einwilligung</strong>
-    </p>
-    <p>
-      Eine „Einwilligung“ der betroffenen Person ist jede freiwillig für den
-      bestimmten Fall, in informierter Weise und unmissverständlich abgegebene
-      Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen
-      bestätigenden Handlung, mit der die betroffene Person zu verstehen gibt,
-      dass sie mit der Verarbeitung der sie betreffenden personenbezogenen Daten
-      einverstanden ist.
-    </p>
-    <h2 id="rechtm-igkeit-der-verarbeitung">Rechtmäßigkeit der Verarbeitung</h2>
+    <details>
+      <summary>
+        1. <strong>Personenbezogene Daten</strong>
+      </summary>
+      <p>
+        „Personenbezogene Daten“ sind alle Informationen, die sich auf eine
+        identifizierte oder identifizierbare natürliche Person (im Folgenden
+        „betroffene Person“) beziehen; als identifizierbar wird eine natürliche
+        Person angesehen, die direkt oder indirekt, insbesondere mittels
+        Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu
+        Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren
+        besonderen Merkmalen identifiziert werden kann, die Ausdruck der
+        physischen, physiologischen, genetischen, psychischen, wirtschaftlichen,
+        kulturellen oder sozialen Identität dieser natürlichen Person sind.
+      </p>
+    </details>
+    <details>
+      <summary>
+        2. <strong>Verarbeitung</strong>
+      </summary>
+      <p>
+        „Verarbeitung“ ist jeder, mit oder ohne Hilfe automatisierter Verfahren,
+        ausgeführter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit
+        personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation,
+        das Ordnen, die Speicherung, die Anpassung oder Veränderung, das
+        Auslesen, das Abfragen, die Verwendung, die Offenlegung durch
+        übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den
+        Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die
+        Vernichtung.
+      </p>
+    </details>
+    <details>
+      <summary>
+        3. <strong>Einschränkung der Verarbeitung</strong>
+      </summary>
+      <p>
+        „Einschränkung der Verarbeitung“ ist die Markierung gespeicherter
+        personenbezogener Daten mit dem Ziel, ihre künftige Verarbeitung
+        einzuschränken.
+      </p>
+    </details>
+    <details>
+      <summary>
+        4. <strong>Profiling</strong>
+      </summary>
+      <p>
+        „Profiling“ ist jede Art der automatisierten Verarbeitung
+        personenbezogener Daten, die darin besteht, dass diese personenbezogenen
+        Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf
+        eine natürliche Person beziehen, zu bewerten, insbesondere um Aspekte
+        bezüglich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönliche
+        Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder
+        Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen.
+      </p>
+    </details>
+    <details>
+      <summary>
+        5. <strong>Pseudonymisierung</strong>
+      </summary>
+      <p>
+        „Pseudonymisierung“ ist die Verarbeitung personenbezogener Daten in
+        einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung
+        zusätzlicher Informationen nicht mehr einer spezifischen betroffenen
+        Person zugeordnet werden können, sofern diese zusätzlichen Informationen
+        gesondert aufbewahrt werden und technischen und organisatorischen
+        Maßnahmen unterliegen, die gewährleisten, dass die personenbezogenen
+        Daten nicht einer identifizierten oder identifizierbaren natürlichen
+        Person zugewiesen werden können.
+      </p>
+    </details>
+    <details>
+      <summary>
+        6. <strong>Dateisystem</strong>
+      </summary>
+      <p>
+        „Dateisystem“ ist jede strukturierte Sammlung personenbezogener Daten,
+        die nach bestimmten Kriterien zugänglich sind, unabhängig davon, ob
+        diese Sammlung zentral, dezentral oder nach funktionalen oder
+        geografischen Gesichtspunkten geordnet geführt wird.
+      </p>
+    </details>
+    <details>
+      <summary>
+        7. <strong>Verantwortlicher</strong>
+      </summary>
+      <p>
+        „Verantwortlicher“ ist eine natürliche oder juristische Person, Behörde,
+        Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen
+        über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten
+        entscheidet; sind die Zwecke und Mittel dieser Verarbeitung durch das
+        Unionsrecht oder das Recht der Mitgliedstaaten vorgegeben, so können der
+        Verantwortliche beziehungsweise die bestimmten Kriterien seiner
+        Benennung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten
+        vorgesehen werden.
+      </p>
+    </details>
+    <details>
+      <summary>
+        8. <strong>Auftragsverarbeiter</strong>
+      </summary>
+      <p>
+        „Auftragsverarbeiter“ ist eine natürliche oder juristische Person,
+        Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im
+        Auftrag des Verantwortlichen verarbeitet.{" "}
+      </p>
+    </details>
+    <details>
+      <summary>
+        9. <strong>Empfänger</strong>
+      </summary>
+      <p>
+        „Empfänger“ ist eine natürliche oder juristische Person, Behörde,
+        Einrichtung oder andere Stelle, denen personenbezogene Daten offengelegt
+        werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt
+        oder nicht. Behörden, die im Rahmen eines bestimmten
+        Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der
+        Mitgliedstaaten möglicherweise personenbezogene Daten erhalten, gelten
+        jedoch nicht als Empfänger; die Verarbeitung dieser Daten durch die
+        genannten Behörden erfolgt im Einklang mit den geltenden
+        Datenschutzvorschriften gemäß den Zwecken der Verarbeitung.
+      </p>
+    </details>
+    <details>
+      <summary>
+        10. <strong>Dritter</strong>
+      </summary>
+      <p>
+        „Dritter“ ist eine natürliche oder juristische Person, Behörde,
+        Einrichtung oder andere Stelle, außer der betroffenen Person, dem
+        Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter
+        der unmittelbaren Verantwortung des Verantwortlichen oder des
+        Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu
+        verarbeiten.
+      </p>
+    </details>
+    <details>
+      <summary>
+        11. <strong>Einwilligung</strong>
+      </summary>
+      <p>
+        Eine „Einwilligung“ der betroffenen Person ist jede freiwillig für den
+        bestimmten Fall, in informierter Weise und unmissverständlich abgegebene
+        Willensbekundung in Form einer Erklärung oder einer sonstigen
+        eindeutigen bestätigenden Handlung, mit der die betroffene Person zu
+        verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden
+        personenbezogenen Daten einverstanden ist.
+      </p>
+    </details>
+    <br />
+    <h2 id="rechtmaessigkeit-der-verarbeitung">
+      Rechtmäßigkeit der Verarbeitung
+    </h2>
     <p>
       Die Verarbeitung personenbezogener Daten ist nur rechtmäßig, wenn für die
       Verarbeitung eine Rechtsgrundlage besteht. Rechtsgrundlage für die
@@ -214,7 +243,7 @@ const Datenschutz = () => (
         handelt.
       </li>
     </ol>
-    <h2 id="information-ber-die-erhebung-personenbezogener-daten">
+    <h2 id="information-ueber-die-erhebung-personenbezogener-daten">
       Information über die Erhebung personenbezogener Daten
     </h2>
     <p>
@@ -254,81 +283,6 @@ const Datenschutz = () => (
       <li>Betriebssystem und dessen Oberfläche</li>
       <li>Sprache und Version der Browsersoftware.</li>
     </ul>
-    <h3 id="einsatz-von-cookies">Einsatz von Cookies</h3>
-    <p>
-      (1) Zusätzlich zu den zuvor genannten Daten werden bei der Nutzung unserer
-      Website Cookies auf Ihrem Rechner gespeichert. Bei Cookies handelt es sich
-      um kleine Textdateien, die auf Ihrer Festplatte dem von Ihnen verwendeten
-      Browser zugeordnet gespeichert werden und durch welche der Stelle, die den
-      Cookie setzt, bestimmte Informationen zufließen. Cookies können keine
-      Programme ausführen oder Viren auf Ihren Computer übertragen. Sie dienen
-      dazu, das Internetangebot insgesamt nutzerfreundlicher und effektiver zu
-      machen.
-    </p>
-    <p>
-      (2) Diese Website nutzt folgende Arten von Cookies, deren Umfang und
-      Funktionsweise im Folgenden erläutert werden:
-    </p>
-    <ul>
-      <li>Transiente Cookies (dazu 1.)</li>
-      <li>
-        <p>Persistente Cookies (dazu 2.).</p>
-      </li>
-      <li>
-        <p>
-          Transiente Cookies werden automatisiert gelöscht, wenn Sie den Browser
-          schließen. Dazu zählen insbesondere die Session-Cookies. Diese
-          speichern eine sogenannte Session-ID, mit welcher sich verschiedene
-          Anfragen Ihres Browsers der gemeinsamen Sitzung zuordnen lassen.
-          Dadurch kann Ihr Rechner wiedererkannt werden, wenn Sie auf unsere
-          Website zurückkehren. Die Session-Cookies werden gelöscht, wenn Sie
-          sich ausloggen oder den Browser schließen.
-        </p>
-      </li>
-      <li>
-        Persistente Cookies werden automatisiert nach einer vorgegebenen Dauer
-        gelöscht, die sich je nach Cookie unterscheiden kann. Sie können die
-        Cookies in den Sicherheitseinstellungen Ihres Browsers jederzeit
-        löschen.
-      </li>
-      <li>
-        Sie können Ihre Browser-Einstellung entsprechend Ihren Wünschen
-        konfigurieren und B. die Annahme von Third-Party-Cookies oder allen
-        Cookies ablehnen. Sog. „Third Party Cookies“ sind Cookies, die durch
-        einen Dritten gesetzt wurden, folglich nicht durch die eigentliche
-        Website auf der man sich gerade befindet. Wir weisen Sie darauf hin,
-        dass Sie durch die Deaktivierung von Cookies eventuell nicht alle
-        Funktionen dieser Website nutzen können.
-      </li>
-    </ul>
-    <h3 id="weitere-funktionen-und-angebote-unserer-website">
-      Weitere Funktionen und Angebote unserer Website
-    </h3>
-    <p>
-      (1) Neben der rein informatorischen Nutzung unserer Website bieten wir
-      verschiedene Leistungen an, die Sie bei Interesse nutzen können. Dazu
-      müssen Sie in der Regel weitere personenbezogene Daten angeben, die wir
-      zur Erbringung der jeweiligen Leistung nutzen und für die die zuvor
-      genannten Grundsätze zur Datenverarbeitung gelten.
-    </p>
-    <p>
-      (2) Teilweise bedienen wir uns zur Verarbeitung Ihrer Daten externer
-      Dienstleister. Diese wurden von uns sorgfältig ausgewählt und beauftragt,
-      sind an unsere Weisungen gebunden und werden regelmäßig kontrolliert.
-    </p>
-    <p>
-      (3) Weiterhin können wir Ihre personenbezogenen Daten an Dritte
-      weitergeben, wenn Aktionsteilnahmen, Gewinnspiele, Vertragsabschlüsse oder
-      ähnliche Leistungen von uns gemeinsam mit Partnern angeboten werden.
-      Nähere Informationen hierzu erhalten Sie bei Angabe Ihrer
-      personenbezogenen Daten oder untenstehend in der Beschreibung des
-      Angebotes.
-    </p>
-    <p>
-      (4) Soweit unsere Dienstleister oder Partner ihren Sitz in einem Staat
-      außerhalb des Europäischen Wirtschaftsraumen (EWR) haben, informieren wir
-      Sie über die Folgen dieses Umstands in der Beschreibung des Angebotes.
-    </p>
     <h2 id="kinder">Kinder</h2>
     <p>
       Unser Angebot richtet sich grundsätzlich an Erwachsene. Personen unter 18
@@ -336,7 +290,7 @@ const Datenschutz = () => (
       keine personenbezogenen Daten an uns übermitteln.
     </p>
     <h2 id="rechte-der-betroffenen-person">Rechte der betroffenen Person</h2>
-    <h3 id="-1-widerruf-der-einwilligung">(1) Widerruf der Einwilligung</h3>
+    <h3 id="1-widerruf-der-einwilligung">(1) Widerruf der Einwilligung</h3>
     <p>
       Sofern die Verarbeitung der personenbezogenen Daten auf einer erteilten
       Einwilligung beruht, haben Sie jederzeit das Recht, die Einwilligung zu
@@ -348,14 +302,14 @@ const Datenschutz = () => (
       Für die Ausübung des Widerrufsrechts können Sie sich jederzeit an uns
       wenden.
     </p>
-    <h3 id="-2-recht-auf-best-tigung">(2) Recht auf Bestätigung</h3>
+    <h3 id="2-recht-auf-bestaetigung">(2) Recht auf Bestätigung</h3>
     <p>
       Sie haben das Recht, von dem Verantwortlichen eine Bestätigung darüber zu
       verlangen, ob wir sie betreffende personenbezogene Daten verarbeiten. Die
       Bestätigung können Sie jederzeit unter den oben genannten Kontaktdaten
       verlangen.
     </p>
-    <h3 id="-3-auskunftsrecht">(3) Auskunftsrecht</h3>
+    <h3 id="3-auskunftsrecht">(3) Auskunftsrecht</h3>
     <p>
       Sofern personenbezogene Daten verarbeitet werden, können Sie jederzeit
       Auskunft über diese personenbezogenen Daten und über folgenden
@@ -408,7 +362,7 @@ const Datenschutz = () => (
       angibt. Das Recht auf Erhalt einer Kopie gemäß Absatz 3 darf die Rechte
       und Freiheiten anderer Personen nicht beeinträchtigen.
     </p>
-    <h3 id="-4-recht-auf-berichtigung">(4) Recht auf Berichtigung</h3>
+    <h3 id="4-recht-auf-berichtigung">(4) Recht auf Berichtigung</h3>
     <p>
       Sie haben das Recht, von uns unverzüglich die Berichtigung Sie
       betreffender unrichtiger personenbezogener Daten zu verlangen. Unter
@@ -416,7 +370,7 @@ const Datenschutz = () => (
       Vervollständigung unvollständiger personenbezogener Daten – auch mittels
       einer ergänzenden Erklärung – zu verlangen.
     </p>
-    <h3 id="-5-recht-auf-l-schung-recht-auf-vergessen-werden-">
+    <h3 id="5-recht-auf-loeschung-recht-auf-vergessen-werden">
       (5) Recht auf Löschung („Recht auf vergessen werden“)
     </h3>
     <p>
@@ -494,7 +448,7 @@ const Datenschutz = () => (
         zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
       </li>
     </ul>
-    <h3 id="-6-recht-auf-einschr-nkung-der-verarbeitung">
+    <h3 id="6-recht-auf-einschraenkung-der-verarbeitung">
       (6) Recht auf Einschränkung der Verarbeitung
     </h3>
     <p>
@@ -540,7 +494,7 @@ const Datenschutz = () => (
       sich die betroffene Person jederzeit an uns unter den oben angegebenen
       Kontaktdaten wenden.
     </p>
-    <h3 id="-7-recht-auf-daten-bertragbarkeit">
+    <h3 id="7-recht-auf-datenuebertragbarkeit">
       (7) Recht auf Datenübertragbarkeit
     </h3>
     <p>
@@ -570,7 +524,7 @@ const Datenschutz = () => (
       Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die dem
       Verantwortlichen übertragen wurde.
     </p>
-    <h3 id="-8-widerspruchsrecht">(8) Widerspruchsrecht</h3>
+    <h3 id="8-widerspruchsrecht">(8) Widerspruchsrecht</h3>
     <p>
       Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation
       ergeben, jederzeit gegen die Verarbeitung Sie betreffender
@@ -610,7 +564,7 @@ const Datenschutz = () => (
       Das Widerspruchsrecht können Sie jederzeit ausüben, indem Sie sich an den
       jeweiligen Verantwortlichen wenden.
     </p>
-    <h3 id="-9-automatisierte-entscheidungen-im-einzelfall-einschlie-lich-profiling">
+    <h3 id="9-automatisierte-entscheidungen-im-einzelfall-einschlie-lich-profiling">
       (9) Automatisierte Entscheidungen im Einzelfall einschließlich Profiling
     </h3>
     <p>
@@ -645,7 +599,7 @@ const Datenschutz = () => (
       Dieses Recht kann die betroffene Person jederzeit ausüben, indem sie sich
       an den jeweiligen Verantwortlichen wendet.
     </p>
-    <h3 id="-10-recht-auf-beschwerde-bei-einer-aufsichtsbeh-rde">
+    <h3 id="10-recht-auf-beschwerde-bei-einer-aufsichtsbeh-rde">
       (10) Recht auf Beschwerde bei einer Aufsichtsbehörde
     </h3>
     <p>
@@ -656,7 +610,7 @@ const Datenschutz = () => (
       betroffene Person der Ansicht ist, dass die Verarbeitung der sie
       betreffenden personenbezogenen Daten gegen diese Verordnung verstößt.
     </p>
-    <h3 id="-11-recht-auf-wirksamen-gerichtlichen-rechtsbehelf">
+    <h3 id="11-recht-auf-wirksamen-gerichtlichen-rechtsbehelf">
       (11) Recht auf wirksamen gerichtlichen Rechtsbehelf
     </h3>
     <p>

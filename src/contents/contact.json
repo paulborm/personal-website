@@ -1,0 +1,9 @@
+{
+  "fullName": "Paul Borm",
+  "phone": "07024 5681353",
+  "mail": "hallo [a] paulborm.de",
+  "address": {
+    "street": "Im Städtle 9",
+    "city": "73240 Wendlingen am Neckar"
+  }
+}
