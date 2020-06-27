@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import contact from "../contents/contact.json"
 
 const Impressum = () => (
   <Layout
@@ -14,23 +15,34 @@ const Impressum = () => (
     <h1>Impressum</h1>
     <h2>Angaben gemäß § 5 TMG:</h2>
     <p>
-      Paul Borm
-      <br />
-      Im Städtle 9<br />
-      73240 Wendlingen am Neckar
+      {contact.fullName}
+      <br /> {contact.address.street}
+      <br /> {contact.address.city}
     </p>
-    <h2>Kontakt:</h2>
     <p>
-      Telefon: 07024 5681353
-      <br />
-      E-Mail: hallo[a]paulborm.de
+      Telefon: {contact.phone}
+      <br /> E-Mail: {contact.mail}
     </p>
-    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
+
+    <h2>Online-Streitbeilegung</h2>
     <p>
-      Paul Borm
-      <br />
-      Im Städtle 9<br />
-      73240 Wendlingen am Neckar
+      Die Europäische Kommission stellt unter{" "}
+      <a
+        href="https://ec.europa.eu/consumers/odr/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://ec.europa.eu/consumers/odr/
+      </a>{" "}
+      eine Plattform zur Online-Streitbeilegung bereit, die Verbraucher für die
+      Beilegung einer Streitigkeit nutzen können und auf der weitere
+      Informationen zum Thema Streitschlichtung zu finden sind.
+    </p>
+    <h2>Außergerichtliche Streitbeilegung</h2>
+    <p>
+      Wir sind weder verpflichtet noch dazu bereit, im Falle einer Streitigkeit
+      mit einem Verbraucher an einem Streitbeilegungsverfahren vor einer
+      Verbraucherschlichtungsstelle teilzunehmen.
     </p>
   </Layout>
 )
