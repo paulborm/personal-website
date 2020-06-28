@@ -1,82 +1,82 @@
 .Footer {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    margin-top: auto;
-    padding: 24px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin-top: auto;
+  padding: 24px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info,
+  &__link {
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 1.35;
+
+    animation-name: fadeUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  &__info,
+  &__info a,
+  &__link {
+    color: gray;
+
+    @media (prefers-color-scheme: dark) {
+      color: #8a8a8a;
+    }
+  }
+
+  &__links {
     width: 100%;
+    text-align: right;
+
+    &::after {
+      display: block;
+      content: "";
+      height: 1px;
+      background-color: #d0d0d0;
+      width: 100%;
+      margin: 0.4em 0 0.6em 0;
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #444444;
+      }
+
+      @media screen and (min-width: 768px) {
+        display: none;
+        text-align: left;
+      }
+    }
 
     @media screen and (min-width: 768px) {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+      width: auto;
+      text-align: left;
     }
+  }
 
-    &__info,
-    &__link {
-        font-family: sans-serif;
-        font-size: 12px;
-        line-height: 1;
+  &__link {
+    display: inline-block;
 
-        animation-name: fadeUp;
-        animation-duration: 1s;
-        animation-fill-mode: both;
+    &:not(:last-child) {
+      margin-right: 1em;
     }
-
-    &__info,
-    &__info a,
-    &__link {
-        color: gray;
-
-        @media (prefers-color-scheme: dark) {
-            color: #8a8a8a;
-        }
-    }
-
-    &__links {
-        width: 100%;
-        text-align: right;
-
-        &::after {
-            display: block;
-            content: "";
-            height: 1px;
-            background-color: #d0d0d0;
-            width: 100%;
-            margin: 0.4em 0 0.6em 0;
-
-            @media (prefers-color-scheme: dark) {
-                background-color: #444444;
-            }
-
-            @media screen and (min-width: 768px) {
-                display: none;
-                text-align: left;
-            }
-        }
-
-        @media screen and (min-width: 768px) {
-            width: auto;
-            text-align: left;
-        }
-    }
-
-    &__link {
-        display: inline-block;
-
-        &:not(:last-child) {
-            margin-right: 1em;
-        }
-    }
+  }
 }
 
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
