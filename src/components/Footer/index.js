@@ -28,7 +28,7 @@ const Footer = () => (
       >
         PGP public key
       </a>{" "}
-      fingerprint: 58B5 32A5 2D90 FD6E A13A 5BBB 3A52 B643 9962 A465
+      fingerprint: 58B5 32A5 2D90 FD6E A13A&nbsp;&nbsp;5BBB 3A52 B643 9962 A465
     </div>
     <div className="Footer__links">
       {LINKS.map(({ to, title }, index) => (
