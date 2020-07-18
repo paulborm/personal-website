@@ -1,90 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
-
 .Headline {
-    $parent: &;
+  $parent: &;
 
-    font-family: 'Helvetica', Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
+  text-align: left;
+
+  &__inner {
+    color: #000;
+
+    @media (prefers-color-scheme: dark) {
+      color: #fff;
+    }
+  }
+
+  &--huge {
+    font-size: 36px;
+    line-height: 1.05;
+    letter-spacing: 0.14em;
+
+    @media screen and (min-width: 960px) {
+      font-size: 56px;
+    }
+
+    @media screen and (min-width: 1300px) {
+      font-size: 72px;
+      letter-spacing: 0.185em;
+    }
+  }
+
+  &--large {
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+
+    @media screen and (min-width: 960px) {
+      font-size: 48px;
+    }
+  }
+
+  &--small {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  &--exclusion {
+    @supports (mix-blend-mode: exclusion) {
+      mix-blend-mode: exclusion;
+    }
+
+    #{$parent}__inner {
+      @supports (mix-blend-mode: exclusion) {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--monospace {
+    font-family: monospace;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+
+  &--regular {
+    font-weight: 400;
+    font-weight: normal;
+  }
+
+  &--black {
+    font-weight: 900;
+    font-weight: bolder;
+  }
+
+  &--left {
     text-align: left;
+  }
 
-    &__inner {
-        color: #000;
+  &--right {
+    text-align: right;
+  }
 
-        @media (prefers-color-scheme: dark) {
-            color: #fff;
-        }
-    }
-
-    &--huge {
-        font-size: 36px;
-        line-height: 1.05;
-        letter-spacing: .14em;
-
-        @media screen and (min-width: 960px) {
-            font-size: 56px;
-        }
-
-        @media screen and (min-width: 1300px) {
-            font-size: 72px;
-            letter-spacing: .185em;
-        }
-    }
-
-    &--large {
-        font-size: 24px;
-        line-height: 1.16;
-        letter-spacing: .05em;
-
-        @media screen and (min-width: 960px) {
-            font-size: 48px;
-        }
-    }
-
-    &--small {
-        font-size: 16px;
-        letter-spacing: 0.05em;
-    }
-
-    &--exclusion {
-        @supports (mix-blend-mode: exclusion) {
-            mix-blend-mode: exclusion;
-        }
-
-        #{$parent}__inner {
-            @supports (mix-blend-mode: exclusion) {
-                color: #FFFFFF;
-            }
-        }
-    }
-
-    &--uppercase {
-        text-transform: uppercase;
-    }
-
-    &--monospace {
-        font-family: monospace;
-        font-weight: normal;
-        letter-spacing: normal;
-    }
-
-    &--regular {
-        font-weight: 400;
-        font-weight: normal;
-    }
-
-    &--black {
-        font-weight: 900;
-        font-weight: bolder;
-    }
-
-    &--left {
-        text-align: left;
-    }
-
-    &--right {
-        text-align: right;
-    }
-
-    &--center {
-        text-align: center;
-    }
+  &--center {
+    text-align: center;
+  }
 }
