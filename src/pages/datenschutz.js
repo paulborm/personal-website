@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import contact from "../contents/contact.json"
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
+import contact from "../contents/contact.json";
 
 const Datenschutz = () => (
   <Layout
     style={{
       margin: `0 auto`,
-      maxWidth: 560,
+      maxWidth: 640,
     }}
   >
     <SEO title="Datenschutz" />
@@ -20,7 +20,6 @@ const Datenschutz = () => (
       {contact.fullName}
       <br /> {contact.address.street}
       <br /> {contact.address.city}
-      <br /> Telefon: {contact.phone}
       <br /> E-Mail: {contact.mail}
     </p>
     <h2 id="sicherheit-und-schutz-ihrer-personenbezogenen-daten">
@@ -108,33 +107,7 @@ const Datenschutz = () => (
     </details>
     <details>
       <summary>
-        5. <strong>Pseudonymisierung</strong>
-      </summary>
-      <p>
-        „Pseudonymisierung“ ist die Verarbeitung personenbezogener Daten in
-        einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung
-        zusätzlicher Informationen nicht mehr einer spezifischen betroffenen
-        Person zugeordnet werden können, sofern diese zusätzlichen Informationen
-        gesondert aufbewahrt werden und technischen und organisatorischen
-        Maßnahmen unterliegen, die gewährleisten, dass die personenbezogenen
-        Daten nicht einer identifizierten oder identifizierbaren natürlichen
-        Person zugewiesen werden können.
-      </p>
-    </details>
-    <details>
-      <summary>
-        6. <strong>Dateisystem</strong>
-      </summary>
-      <p>
-        „Dateisystem“ ist jede strukturierte Sammlung personenbezogener Daten,
-        die nach bestimmten Kriterien zugänglich sind, unabhängig davon, ob
-        diese Sammlung zentral, dezentral oder nach funktionalen oder
-        geografischen Gesichtspunkten geordnet geführt wird.
-      </p>
-    </details>
-    <details>
-      <summary>
-        7. <strong>Verantwortlicher</strong>
+        5. <strong>Verantwortlicher</strong>
       </summary>
       <p>
         „Verantwortlicher“ ist eine natürliche oder juristische Person, Behörde,
@@ -149,17 +122,7 @@ const Datenschutz = () => (
     </details>
     <details>
       <summary>
-        8. <strong>Auftragsverarbeiter</strong>
-      </summary>
-      <p>
-        „Auftragsverarbeiter“ ist eine natürliche oder juristische Person,
-        Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im
-        Auftrag des Verantwortlichen verarbeitet.{" "}
-      </p>
-    </details>
-    <details>
-      <summary>
-        9. <strong>Empfänger</strong>
+        6. <strong>Empfänger</strong>
       </summary>
       <p>
         „Empfänger“ ist eine natürliche oder juristische Person, Behörde,
@@ -175,20 +138,7 @@ const Datenschutz = () => (
     </details>
     <details>
       <summary>
-        10. <strong>Dritter</strong>
-      </summary>
-      <p>
-        „Dritter“ ist eine natürliche oder juristische Person, Behörde,
-        Einrichtung oder andere Stelle, außer der betroffenen Person, dem
-        Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter
-        der unmittelbaren Verantwortung des Verantwortlichen oder des
-        Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu
-        verarbeiten.
-      </p>
-    </details>
-    <details>
-      <summary>
-        11. <strong>Einwilligung</strong>
+        7. <strong>Einwilligung</strong>
       </summary>
       <p>
         Eine „Einwilligung“ der betroffenen Person ist jede freiwillig für den
@@ -624,6 +574,6 @@ const Datenschutz = () => (
       personenbezogenen Daten verletzt wurden.
     </p>
   </Layout>
-)
+);
 
-export default Datenschutz
+export default Datenschutz;

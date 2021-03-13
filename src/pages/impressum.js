@@ -1,14 +1,13 @@
-import React from "react"
-
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import contact from "../contents/contact.json"
+import React from "react";
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
+import contact from "../contents/contact.json";
 
 const Impressum = () => (
   <Layout
     style={{
       margin: `0 auto`,
-      maxWidth: 560,
+      maxWidth: 640,
     }}
   >
     <SEO title="Impressum" />
@@ -18,33 +17,15 @@ const Impressum = () => (
       {contact.fullName}
       <br /> {contact.address.street}
       <br /> {contact.address.city}
-    </p>
-    <p>
-      Telefon: {contact.phone}
+      <br />
       <br /> E-Mail: {contact.mail}
     </p>
-
-    <h2>Online-Streitbeilegung</h2>
     <p>
-      Die Europäische Kommission stellt unter{" "}
-      <a
-        href="https://ec.europa.eu/consumers/odr/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        https://ec.europa.eu/consumers/odr/
-      </a>{" "}
-      eine Plattform zur Online-Streitbeilegung bereit, die Verbraucher für die
-      Beilegung einer Streitigkeit nutzen können und auf der weitere
-      Informationen zum Thema Streitschlichtung zu finden sind.
-    </p>
-    <h2>Außergerichtliche Streitbeilegung</h2>
-    <p>
-      Wir sind weder verpflichtet noch dazu bereit, im Falle einer Streitigkeit
-      mit einem Verbraucher an einem Streitbeilegungsverfahren vor einer
-      Verbraucherschlichtungsstelle teilzunehmen.
+      <strong>Inhaltlich verantwortlich gemäß § 55 RStV:</strong>
+      <br /> {contact.fullName}, {contact.address.street},{" "}
+      {contact.address.city}
     </p>
   </Layout>
-)
+);
 
-export default Impressum
+export default Impressum;

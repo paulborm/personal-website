@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Paul Borm`,
-    description: `Frontend-Entwickler & Mediengestalter aus dem Raum Stuttgart, Esslingen,
-                  Nürtingen und Wendlingen. Ich gestalte und entwickle moderne Webprojekte.`,
+    description: `Frontend-Entwickler aus Stuttgart. Ich gestalte und entwickle moderne Webprojekte.`,
     author: `@borm_paul`,
   },
   plugins: [
@@ -66,4 +65,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

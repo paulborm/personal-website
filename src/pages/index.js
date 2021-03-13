@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import Headline from "../components/Headline"
+import Layout from "../components/Layout";
+import SEO from "../components/seo";
+import Headline from "../components/Headline";
 
 const IndexPage = () => (
   <Layout
@@ -26,7 +26,7 @@ const IndexPage = () => (
         }
     `}
     </style>
-    <SEO title="Frontend-Entwickler & Mediengestalter | Stuttgart, Esslingen, Wendlingen" />
+    <SEO title="Frontend-Entwickler | Stuttgart, Esslingen, Wendlingen" />
     <Headline
       as="h2"
       look="large"
@@ -52,9 +52,9 @@ const IndexPage = () => (
         👨‍💻
       </span>
       <br />
-      Frontend-Entwickler & Mediengestalter aus dem Raum Stuttgart.
+      Frontend-Entwickler aus Stuttgart.
     </Headline>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
